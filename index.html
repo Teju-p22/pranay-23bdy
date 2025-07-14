@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday, My Love!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #fffaf0;
+      --ink: #24324a;
+      --accent: #ff6b81;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: var(--bg);
+      font-family: 'Pacifico', cursive;
+      color: var(--ink);
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .hearts {
+      color: var(--accent);
+      font-size: 1.5rem;
+      animation: float 2s ease-in-out infinite;
+    }
+    .click-me {
+      font-size: 1.2rem;
+      color: #e75a70;
+      margin-top: 1rem;
+      margin-bottom: 1.2rem;
+    }
+    .main-doodle {
+      width: 220px;
+      border: 4px solid var(--accent);
+      border-radius: 20px;
+      padding: 10px;
+      box-shadow: 0 0 15px #ff6b81;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .main-doodle:hover {
+      transform: scale(1.05);
+    }
+
+    #menu {
+      display: none;
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .menu-icon {
+      width: 100px;
+      border-radius: 12px;
+      padding: 6px;
+      border: 3px solid var(--accent);
+      box-shadow: 0 0 12px #ff6b81;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .menu-icon:hover {
+      transform: scale(1.1);
+    }
+
+    .section {
+      display: none;
+      margin-top: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    .box {
+      background: #fde7d7;
+      padding: 1rem;
+      margin: 0.5rem 0;
+      border-radius: 12px;
+    }
+
+    .emoji {
+      margin-right: 0.5rem;
+    }
+
+    .back-btn {
+      margin-top: 2rem;
+      display: inline-block;
+      background: #ff6b81;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    .birthday-title {
+      font-family: Arial, sans-serif;
+      font-size: 1.6rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy Birthday My Love! <span class="hearts">💖💖💖</span></h1>
+  <div class="click-me">click me ↓</div>
+  <img src="images/main-couple.jpeg" class="main-doodle" onclick="showMenu()" alt="Main couple"/>
+
+  <div id="menu">
+    <img src="images/envelope.jpeg" class="menu-icon" onclick="showSection('letter')" alt="Letter"/>
+    <img src="images/reasons.jpeg" class="menu-icon" onclick="showSection('reasons')" alt="23 Reasons"/>
+    <img src="images/book.jpeg" class="menu-icon" onclick="showSection('book')" alt="Book"/>
+  </div>
+
+  <!-- LETTER -->
+  <div class="section" id="letter">
+    <p class="birthday-title">Happy Birthday Mogguda 😘</p>
+    <p>
+      Niku already telusu I’m not soo happy u spending ur birthday far from me, I wanted to create lots of memories for us to cherish, as I wasn’t having any earnings for now I couldn’t give anything fancy or anything u need, actually I had planned to give 23 gifts for your 23rd birthday but I couldn’t accomplish properly because of my broken wallet which left this mission flop 🥺😂. 
+    </p>
+    <p>
+      You can’t even imagine how much I love u: gundu boss 🤟. U might have fallen first but I fell harder, love you sooooooooo much mogguda❤️! Thanks for always being there for me. I know I know ivi ani nenu eppudu chepeve but eni saarlu gurthu cheskuna thakuve.
+    </p>
+    <p>
+      Inka niii migitha birthday’s ani naatho undipovali ani, inka inka memories create cheskovali ani kooruthu once again wish u happy birthday moggudu garu 😘!
+    </p>
+    <p>From ur srimathi (Ur cute cute 🐶)</p>
+    <div><a class="back-btn" onclick="goBack()">← Back</a></div>
+  </div>
+
+  <!-- 23 REASONS -->
+  <div class="section" id="reasons">
+    <h2>23 Reasons Why I Love You</h2>
+    <div class="box">❤️ You make me feel seen</div>
+    <div class="box">❤️ You listen – truly listen</div>
+    <div class="box">❤️ You make sad moments into happy moments</div>
+    <div class="box">❤️ Your smile melts away even the worst days</div>
+    <div class="box">❤️ You never judge me, no matter how messy I get</div>
+    <div class="box">❤️ You make effort even in the smallest ways</div>
+    <div class="box">❤️ You calm my chaos — mentally, emotionally, spiritually</div>
+    <div class="box">❤️ You never let me feel alone, even in silence</div>
+    <div class="box">❤️ You're my best friend, not just my partner</div>
+    <div class="box">❤️ You support my goals without trying to change me</div>
+    <div class="box">❤️ Your hugs feel like home</div>
+    <div class="box">❤️ You challenge me — to grow, to think, to be better</div>
+    <div class="box">❤️ You forgive and never hold grudges</div>
+    <div class="box">❤️ You respect my independence but remind me I'm not alone</div>
+    <div class="box">❤️ You’re proud of me and you show it</div>
+    <div class="box">❤️ Because you’re you — and that’s all I ever needed</div>
+    <div class="box">❤️ You make me feel safe</div>
+    <div class="box">❤️ Your hug is my home</div>
+    <div class="box">❤️ Your love is the warmth I never experienced</div>
+    <div class="box">❤️ You notice even the little things about me</div>
+    <div class="box">❤️ You believe in us when I lose hope</div>
+    <div class="box">❤️ Your love made me the happiest person</div>
+    <div class="box">❤️ You’re everything I wished for, and more</div>
+    <div><a class="back-btn" onclick="goBack()">← Back</a></div>
+  </div>
+
+  <!-- OPEN BOOK -->
+  <div class="section" id="book">
+    <h2>Things I Wish For Us</h2>
+    <div class="box">📌 I wish we always laugh, even in tough times</div>
+    <div class="box">📌 I wish your hand always finds mine</div>
+    <div class="box">📌 I wish we never stop learning each other</div>
+    <div class="box">📌 I wish we take silly photos when we’re 80</div>
+    <div class="box">📌 I wish you always know how much you’re loved</div>
+
+    <h2>If I Could Gift You Anything…</h2>
+    <div class="box">🎁 I’d gift you the loudest hug in the world</div>
+    <div class="box">🎁 I’d gift you a day without a single worry</div>
+    <div class="box">🎁 I’d gift you a bottle of my endless love</div>
+    <div class="box">🎁 I’d gift you a moment where time pauses for us</div>
+    <div class="box">🎁 I’d gift you 100 handwritten letters with a kiss on each</div>
+
+    <h2>Tiny Promises</h2>
+    <div class="box">🌸 I promise to annoy you forever</div>
+    <div class="box">🌸 I promise to laugh at your PJ-level jokes</div>
+    <div class="box">🌸 I promise to always say “I love you”</div>
+    <div class="box">🌸 I promise to make your bad days a little softer</div>
+    <div class="box">🌸 I promise to never let you feel unloved</div>
+
+    <div><a class="back-btn" onclick="goBack()">← Back</a></div>
+  </div>
+
+  <script>
+    function showMenu() {
+      document.getElementById("menu").style.display = "flex";
+      document.querySelector(".main-doodle").style.display = "none";
+      document.querySelector(".click-me").style.display = "none";
+    }
+
+    function showSection(id) {
+      document.getElementById("menu").style.display = "none";
+      document.querySelectorAll('.section').forEach(sec => sec.style.display = 'none');
+      document.getElementById(id).style.display = "block";
+    }
+
+    function goBack() {
+      document.querySelectorAll('.section').forEach(sec => sec.style.display = 'none');
+      document.getElementById("menu").style.display = "flex";
+    }
+  </script>
+</body>
+</html>
